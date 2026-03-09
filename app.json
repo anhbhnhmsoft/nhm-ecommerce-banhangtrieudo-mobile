@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "nhm-ecommerce-banhangtrieudo-mobile",
-    "slug": "nhm-ecommerce-banhangtrieudo-mobile",
+    "name": "thuongmaitrieudo",
+    "slug": "thuongmaitrieudo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "nhmecommercebanhangtrieudomobile",
+    "scheme": "thuongmaitrieudo",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
