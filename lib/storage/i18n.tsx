@@ -1,7 +1,7 @@
 import en from "@/i18n/en.json";
 import vi from "@/i18n/vi.json";
 import { Storage } from "@/lib/storage";
-import { useApplicationStore } from "@/modules/app";
+import { useApplicationStore } from "@/modules/app/stores";
 import { getLocales } from "expo-localization";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";

@@ -5,7 +5,7 @@ import {
   responsiveSpacing,
   responsiveSpacingVertical,
 } from "@/lib/utils/responsive";
-import { useThemeStore } from "@/modules/app/use-theme-store";
+import { useThemeStore } from "@/modules/app/stores/use-theme-store";
 import { Eye, EyeOff } from "lucide-react-native";
 import React, { useState } from "react";
 import {

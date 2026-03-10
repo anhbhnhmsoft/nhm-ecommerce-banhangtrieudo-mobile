@@ -9,7 +9,7 @@ import {
   responsiveSpacing,
   responsiveSpacingVertical,
 } from "@/lib/utils";
-import { useThemeStore } from "@/modules/app";
+import { useThemeStore } from "@/modules/app/stores";
 import { useForgotPassword } from "@/modules/auth/hook";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { router } from "expo-router";

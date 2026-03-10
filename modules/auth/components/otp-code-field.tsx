@@ -1,7 +1,7 @@
 import Typo from "@/components/ui/typo";
 import { CELL_OTP_COUNT } from "@/lib/consts";
 import { responsiveFont, responsiveSpacing } from "@/lib/utils/responsive";
-import { useThemeStore } from "@/modules/app/use-theme-store";
+import { useThemeStore } from "@/modules/app/stores/use-theme-store";
 import { FC } from "react";
 import { StyleSheet, View } from "react-native";
 import {

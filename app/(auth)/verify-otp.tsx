@@ -8,7 +8,7 @@ import {
   responsiveSpacing,
   responsiveSpacingVertical,
 } from "@/lib/utils";
-import { useThemeStore } from "@/modules/app";
+import { useThemeStore } from "@/modules/app/stores";
 import { OtpCodeField } from "@/modules/auth/components";
 import { useOtp } from "@/modules/auth/hook";
 import { Fingerprint } from "lucide-react-native";

@@ -4,7 +4,7 @@ import {
   responsiveSpacing,
   responsiveSpacingVertical,
 } from "@/lib/utils";
-import { useThemeStore } from "@/modules/app";
+import { useThemeStore } from "@/modules/app/stores";
 import { router } from "expo-router";
 import { ChevronLeft } from "lucide-react-native";
 import React from "react";

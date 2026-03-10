@@ -8,7 +8,7 @@ import {
   responsiveSpacing,
   responsiveSpacingVertical,
 } from "@/lib/utils";
-import { useThemeStore } from "@/modules/app";
+import { useThemeStore } from "@/modules/app/stores";
 import { useResetPassword } from "@/modules/auth/hook";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import { CheckCircle2, Circle } from "lucide-react-native";

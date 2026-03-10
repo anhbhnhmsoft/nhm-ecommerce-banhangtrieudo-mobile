@@ -8,7 +8,7 @@ import {
   responsiveSpacing,
   responsiveSpacingVertical,
 } from "@/lib/utils";
-import { useThemeStore } from "@/modules/app";
+import { useThemeStore } from "@/modules/app/stores";
 import { useLogin } from "@/modules/auth/hook";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";

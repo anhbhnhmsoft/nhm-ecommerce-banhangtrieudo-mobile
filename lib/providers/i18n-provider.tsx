@@ -1,14 +1,13 @@
 import en from "@/i18n/en.json";
 import vi from "@/i18n/vi.json";
-import { useApplicationStore } from "@/modules/app";
+import { useApplicationStore } from "@/modules/app/stores";
 import { getLocales } from "expo-localization";
 import i18n from "i18next";
-import { ReactNode, useEffect } from "react";
 import { initReactI18next } from "react-i18next";
 import { _LanguageCode } from "../consts";
-import { checkLanguage } from "../utils/check-language";
 import { Storage } from "../storage";
 import { _StorageKey } from "../storage/key";
+import { checkLanguage } from "../utils/check-language";
 const resources = {
   vi: { translation: vi },
   en: { translation: en },
