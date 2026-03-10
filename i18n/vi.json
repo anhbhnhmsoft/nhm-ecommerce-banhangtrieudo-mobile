@@ -1,0 +1,111 @@
+{
+  "auth": {
+    "login": {
+      "title": "Đăng nhập",
+      "welcome": "Chào mừng trở lại",
+      "subtitle": "Vui lòng đăng nhập để tiếp tục trải nghiệm\nmua sắm đẳng cấp",
+      "email_label": "Số điện thoại hoặc Email",
+      "email_placeholder": "Nhập email hoặc số điện thoại",
+      "password_label": "Mật khẩu",
+      "password_placeholder": "Nhập mật khẩu",
+      "forgot_password": "Quên mật khẩu?",
+      "login_button": "Đăng nhập",
+      "no_account": "Chưa có tài khoản?",
+      "register_now": "Đăng ký ngay"
+    },
+    "validation": {
+      "phone_required": "Vui lòng nhập số điện thoại hoặc email",
+      "phone_invalid": "Số điện thoại hoặc email không hợp lệ",
+      "password_required": "Vui lòng nhập mật khẩu",
+      "password_min": "Mật khẩu phải có ít nhất 8 ký tự",
+      "password_lowercase": "Mật khẩu phải có ít nhất 1 chữ thường",
+      "password_uppercase": "Mật khẩu phải có ít nhất 1 chữ hoa",
+      "password_number": "Mật khẩu phải có ít nhất 1 chữ số"
+    },
+    "register": {
+      "title": "Đăng ký",
+      "heading": "Tạo tài khoản",
+      "subtitle": "Tham gia cộng đồng mua sắm cao cấp ngay hôm nay",
+      "fullname_label": "Họ và tên",
+      "fullname_placeholder": "Nhập họ và tên của bạn",
+      "phone_label": "Số điện thoại",
+      "phone_placeholder": "Nhập số điện thoại",
+      "email_label": "Email",
+      "email_placeholder": "example@gmail.com",
+      "password_label": "Mật khẩu",
+      "password_placeholder": "••••••••",
+      "confirm_password_label": "Xác nhận mật khẩu",
+      "confirm_password_placeholder": "••••••••",
+      "otp_label": "Nhận OTP qua :",
+      "otp_phone": "Số điện thoại",
+      "otp_email": "Email",
+      "agree_terms": "Tôi đồng ý với ",
+      "terms_link": "điều khoản",
+      "and": " và ",
+      "privacy_link": "chính sách bảo mật",
+      "terms_suffix": " của ứng dụng",
+      "register_button": "Đăng ký ngay",
+      "have_account": "Bạn đã có tài khoản?",
+      "login_now": "Đăng nhập",
+      "validation": {
+        "fullname_required": "Vui lòng nhập họ và tên",
+        "fullname_min": "Họ và tên phải có ít nhất 2 ký tự",
+        "phone_required": "Vui lòng nhập số điện thoại",
+        "phone_invalid": "Số điện thoại không hợp lệ",
+        "email_required": "Vui lòng nhập email",
+        "email_invalid": "Email không hợp lệ",
+        "password_required": "Vui lòng nhập mật khẩu",
+        "password_min": "Mật khẩu phải có ít nhất 8 ký tự",
+        "password_lowercase": "Mật khẩu phải có ít nhất 1 chữ thường",
+        "password_uppercase": "Mật khẩu phải có ít nhất 1 chữ hoa",
+        "password_number": "Mật khẩu phải có ít nhất 1 chữ số",
+        "confirm_password_required": "Vui lòng xác nhận mật khẩu",
+        "confirm_password_mismatch": "Mật khẩu xác nhận không khớp",
+        "agree_terms_required": "Vui lòng đồng ý với điều khoản sử dụng"
+      }
+    },
+    "otp": {
+      "title": "Xác thực OTP",
+      "subtitle": "Mã xác thực đã được gửi đến số điện thoại/email của bạn. Vui lòng nhập mã gồm 6 chữ số.",
+      "confirm_button": "Xác nhận",
+      "no_code": "Không nhận được mã?",
+      "resend_after": "Gửi lại mã (sau {{seconds}}s)",
+      "resend": "Gửi lại mã"
+    },
+    "forgot_password": {
+      "title": "Quên mật khẩu",
+      "subtitle": "Vui lòng nhập số điện thoại hoặc email đã đăng ký để khôi phục mật khẩu.",
+      "contact_label": "Email hoặc Số điện thoại",
+      "contact_placeholder": "example@email.com",
+      "submit_button": "GỬI MÃ XÁC NHẬN",
+      "need_help": "Bạn cần hỗ trợ thêm?",
+      "contact_support": "Liên hệ CSKH",
+      "validation": {
+        "contact_required": "Vui lòng nhập số điện thoại hoặc email",
+        "contact_invalid": "Số điện thoại hoặc email không hợp lệ"
+      }
+    },
+    "reset_password": {
+      "title": "Đặt lại mật khẩu",
+      "subtitle": "Mật khẩu mới phải khác mật khẩu cũ và đáp ứng các yêu cầu bảo mật.",
+      "password_label": "Mật khẩu mới",
+      "password_placeholder": "••••••••",
+      "confirm_label": "Xác nhận mật khẩu",
+      "confirm_placeholder": "••••••••",
+      "hint_length": "Ít nhất 8 ký tự",
+      "hint_uppercase": "Ít nhất 1 chữ hoa",
+      "hint_lowercase": "Ít nhất 1 chữ thường",
+      "hint_number": "Ít nhất 1 chữ số",
+      "submit_button": "Xác nhận",
+      "validation": {
+        "password_required": "Vui lòng nhập mật khẩu mới",
+        "password_min": "Mật khẩu phải có ít nhất 8 ký tự",
+        "password_lowercase": "Mật khẩu phải có ít nhất 1 chữ thường",
+        "password_uppercase": "Mật khẩu phải có ít nhất 1 chữ hoa",
+        "password_number": "Mật khẩu phải có ít nhất 1 chữ số",
+        "confirm_required": "Vui lòng xác nhận mật khẩu",
+        "confirm_mismatch": "Mật khẩu xác nhận không khớp"
+      }
+    }
+  }
+}

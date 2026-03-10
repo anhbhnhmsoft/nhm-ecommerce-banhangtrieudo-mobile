@@ -1,0 +1,17 @@
+{
+  "auth": {
+    "login": {
+      "title": "Sign In",
+      "welcome": "Welcome back",
+      "subtitle": "Please sign in to continue enjoying\npremium shopping experience",
+      "email_label": "Phone number or Email",
+      "email_placeholder": "Enter email or phone number",
+      "password_label": "Password",
+      "password_placeholder": "Enter password",
+      "forgot_password": "Forgot password?",
+      "login_button": "Sign In",
+      "no_account": "Don't have an account?",
+      "register_now": "Register now"
+    }
+  }
+}
