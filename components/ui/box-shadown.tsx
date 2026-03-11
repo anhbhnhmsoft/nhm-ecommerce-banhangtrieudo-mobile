@@ -6,6 +6,7 @@ interface BoxShadowProps extends ViewProps {
   children: ReactNode;
   padding?: number;
   radius?: number;
+  styleContent?: ViewProps["style"];
 }
 
 export const BoxShadow = ({
@@ -13,6 +14,7 @@ export const BoxShadow = ({
   style,
   padding,
   radius,
+  styleContent,
   ...props
 }: BoxShadowProps) => {
   const theme = useThemeStore((s) => s.colors);
@@ -31,7 +33,7 @@ export const BoxShadow = ({
       ]}
       {...props}
     >
-      <View style={styles.content}>{children}</View>
+      <View style={[styles.content, styleContent]}>{children}</View>
     </View>
   );
 };

@@ -74,7 +74,7 @@ const AppContainer = () => {
       </Stack.Protected>
       <Stack.Protected guard={true}>
         <Stack.Screen name="(app)" />
-        <Stack.Protected guard={true}>
+        <Stack.Protected guard={false}>
           <Stack.Screen name="(auth)" />
         </Stack.Protected>
       </Stack.Protected>
