@@ -7,14 +7,13 @@ import {
   responsiveSpacingVertical,
 } from "@/lib/utils";
 import { useThemeStore } from "@/modules/app/stores";
+import { TabKey } from "@/modules/app/utils/type";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import React from "react";
 import { Platform, StyleSheet, TouchableOpacity, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-
-export type TabKey = "home" | "manage" | "post" | "zalo" | "account";
 
 interface TabItem {
   key: TabKey;
@@ -37,25 +36,21 @@ export const TABS: TabItem[] = [
     ),
   },
   {
-    key: "manage",
+    key: "products",
     label: "Sản phẩm",
     icon: (color, size) => (
       <FontAwesome6 name="list-ul" size={size} color={color} />
     ),
   },
   {
-    key: "post",
-    label: "Đăng tin",
+    key: "services",
+    label: "Dịch vụ",
     icon: (color, size) => (
-      <FontAwesome6 name="plus" size={size} color={color} />
-    ),
-    isCenter: true,
-  },
-  {
-    key: "zalo",
-    label: "Nhóm Zalo",
-    icon: (color, size) => (
-      <MaterialCommunityIcons name="chat-outline" size={size} color={color} />
+      <MaterialCommunityIcons
+        name="briefcase-outline"
+        size={size}
+        color={color}
+      />
     ),
   },
   {

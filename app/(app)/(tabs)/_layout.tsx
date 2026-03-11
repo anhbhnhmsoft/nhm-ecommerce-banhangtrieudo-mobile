@@ -1,20 +1,6 @@
-import { BottomNavigation, TabKey, TABS } from "@/components/ui";
+import { BottomNavigation, TABS } from "@/components/ui";
+import { TAB_ROUTES, TabKey } from "@/modules/app/utils/type";
 import { Tabs, useRouter } from "expo-router";
-
-const TAB_ROUTES: Record<
-  TabKey,
-  | "/(app)/(tabs)/home"
-  | "/(app)/(tabs)/manage"
-  | "/(app)/(tabs)/post"
-  | "/(app)/(tabs)/zalo"
-  | "/(app)/(tabs)/account"
-> = {
-  home: "/(app)/(tabs)/home",
-  manage: "/(app)/(tabs)/manage",
-  post: "/(app)/(tabs)/post",
-  zalo: "/(app)/(tabs)/zalo",
-  account: "/(app)/(tabs)/account",
-};
 
 export default function TabLayout() {
   const router = useRouter();

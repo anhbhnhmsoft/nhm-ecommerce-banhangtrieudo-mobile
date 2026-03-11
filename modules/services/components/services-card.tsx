@@ -2,14 +2,16 @@ import Box from "@/components/ui/box";
 import Typo from "@/components/ui/typo";
 import {
   responsiveFont,
+  responsiveIcon,
   responsiveRadius,
   responsiveSize,
   responsiveSpacing,
   responsiveSpacingVertical,
 } from "@/lib/utils";
 import { useThemeStore } from "@/modules/app/stores";
+import { Sparkles } from "lucide-react-native";
 import React from "react";
-import { Image, StyleSheet, TouchableOpacity } from "react-native";
+import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 
 export type ServiceItem = {
   id: string;
@@ -17,6 +19,8 @@ export type ServiceItem = {
   subtitle: string;
   tag: string;
   image: string;
+  isNew?: boolean;
+  isFeatured?: boolean;
 };
 
 interface ServiceCardProps {
@@ -31,17 +35,35 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ item, onPress }) => {
       flexDirection="row"
       alignItems="center"
       radius={responsiveRadius(28)}
-      backgroundColor={theme.base[1]}
+      backgroundColor={item.isFeatured ? theme.primary[3] : theme.base[1]}
       marginBottom={responsiveSpacingVertical(10)}
       padding={responsiveSpacing(10)}
       style={styles.shadow}
     >
-      {/* Image bo tròn */}
-      <Image
-        source={{ uri: item.image }}
-        style={styles.image}
-        resizeMode="cover"
-      />
+      {/* Image + badges */}
+      <Box>
+        <Image
+          source={{ uri: item.image }}
+          style={styles.image}
+          resizeMode="cover"
+        />
+
+        {/* NEW — góc trên trái */}
+        {item.isNew && (
+          <View style={styles.badgeNew}>
+            <Sparkles size={responsiveIcon(9)} color="#fff" fill="#fff" />
+            <Typo
+              fontSize={responsiveFont(8)}
+              color="#fff"
+              weight="700"
+              marginLeft={responsiveSpacing(2)}
+            >
+              NEW
+            </Typo>
+          </View>
+        )}
+      </Box>
+      {/* FEATURED — góc trên phải */}
 
       {/* Content */}
       <Box flex={1} marginLeft={responsiveSpacing(12)}>
@@ -103,6 +125,28 @@ const styles = StyleSheet.create({
     width: responsiveSize(90),
     height: responsiveSize(90),
     borderRadius: responsiveRadius(28),
+  },
+  badgeNew: {
+    position: "absolute",
+    top: -responsiveSpacingVertical(6),
+    left: -responsiveSpacing(4),
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#2B7FFF",
+    paddingHorizontal: responsiveSpacing(6),
+    paddingVertical: responsiveSpacingVertical(3),
+    borderRadius: 999,
+  },
+  badgeFeatured: {
+    position: "absolute",
+    top: -responsiveSpacingVertical(6),
+    right: -responsiveSpacing(4),
+    width: responsiveSize(22),
+    height: responsiveSize(22),
+    borderRadius: 999,
+    backgroundColor: "#D4AF37",
+    alignItems: "center",
+    justifyContent: "center",
   },
   bookBtn: {
     paddingHorizontal: responsiveSpacing(14),

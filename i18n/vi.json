@@ -1,7 +1,8 @@
 {
   "common": {
     "greeting": "Xin chào {{name}}!",
-    "greeting_subtitle": "Chào mừng bạn đến với TVH"
+    "greeting_subtitle": "Chào mừng bạn đến với TVH",
+    "details": "Chi tiết"
   },
   "auth": {
     "login": {
