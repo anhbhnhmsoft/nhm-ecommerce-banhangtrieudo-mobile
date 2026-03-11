@@ -69,7 +69,15 @@ const AppContainer = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="(auth)" />
+      <Stack.Protected guard={false}>
+        <Stack.Screen name="index" />
+      </Stack.Protected>
+      <Stack.Protected guard={true}>
+        <Stack.Screen name="(app)" />
+        <Stack.Protected guard={true}>
+          <Stack.Screen name="(auth)" />
+        </Stack.Protected>
+      </Stack.Protected>
     </Stack>
   );
 };

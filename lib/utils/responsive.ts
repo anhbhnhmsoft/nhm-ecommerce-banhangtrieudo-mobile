@@ -1,37 +1,86 @@
-import { Dimensions , Platform} from "react-native";
+import { Dimensions, PixelRatio, Platform } from "react-native";
 
 const { width, height } = Dimensions.get("window");
 
-/** Kích thước chuẩn thiết kế (Figma thường 375 x 812) */
+// ─── Baseline ────────────────────────────────────────────────────────────────
 const guidelineBaseWidth = 375;
 const guidelineBaseHeight = 812;
 
-/** Scale theo chiều ngang */
-export const scale = (size: number) => (width / guidelineBaseWidth) * size;
+// ─── Device Detection ────────────────────────────────────────────────────────
+export const isPad = Platform.OS === "ios" && Math.min(width, height) >= 768;
+export const isAndroidTablet =
+  Platform.OS === "android" && Math.min(width, height) >= 600;
+export const isTablet = isPad || isAndroidTablet;
 
-/** Scale theo chiều dọc */
-export const verticalScale = (size: number) =>
-  (height / guidelineBaseHeight) * size;
-
-/** Scale ở mức vừa phải (thường dùng cho fontSize) */
-export const moderateScale = (size: number, factor = 0.5) =>
-  size + (scale(size) - size) * factor;
-
-/** Lấy kích thước màn hình */
+// ─── Screen ──────────────────────────────────────────────────────────────────
 export const SCREEN = { width, height };
 
-/** spacing theo chiều ngang */
-export const responsiveSpacing = (value: number) => scale(value);
+// ─── Scale Functions ─────────────────────────────────────────────────────────
 
-/** spacing theo chiều dọc */
-export const responsiveSpacingVertical = (value: number) =>
-  verticalScale(value);
+/** Scale ngang — dùng cho padding, margin, width */
+export const scale = (size: number): number => {
+  const ratio = width / guidelineBaseWidth;
+  // Tablet: giới hạn scale tối đa 1.4 để tránh layout quá to
+  const clampedRatio = isTablet ? Math.min(ratio, 1.4) : ratio;
+  return size * clampedRatio;
+};
 
-/** font responsive */
-export const responsiveFont = (value: number) => moderateScale(value, 0.4);
+/** Scale dọc — dùng cho height, paddingVertical */
+export const verticalScale = (size: number): number => {
+  const ratio = height / guidelineBaseHeight;
+  const clampedRatio = isTablet ? Math.min(ratio, 1.4) : ratio;
+  return size * clampedRatio;
+};
 
-export const responsiveIcon = (size: number) => moderateScale(size, 0.5);
+/**
+ * Moderate scale — dùng cho font, icon, border radius
+ * factor: 0 = không scale, 1 = scale full
+ * Tablet dùng factor thấp hơn để tránh quá to
+ */
+export const moderateScale = (size: number, factor = 0.5): number => {
+  const tabletFactor = isTablet ? factor * 0.4 : factor;
+  return size + (scale(size) - size) * tabletFactor;
+};
 
+/** Vertical moderate — dùng cho height của button, input */
+export const moderateVerticalScale = (size: number, factor = 0.5): number => {
+  const tabletFactor = isTablet ? factor * 0.4 : factor;
+  return size + (verticalScale(size) - size) * tabletFactor;
+};
 
-export const isPad =
-    Platform.OS === "ios" && Math.min(width, height) >= 768;
+// ─── Responsive Helpers ───────────────────────────────────────────────────────
+
+/** Spacing ngang: padding, margin, width */
+export const responsiveSpacing = (value: number): number => scale(value);
+
+/** Spacing dọc: paddingVertical, height */
+export const responsiveSpacingVertical = (value: number): number =>
+  moderateVerticalScale(value, 0.5);
+
+/** Font size */
+export const responsiveFont = (value: number): number =>
+  moderateScale(value, 0.4);
+
+/** Icon size */
+export const responsiveIcon = (size: number): number =>
+  moderateScale(size, 0.45);
+
+/**
+ * Size cố định (ảnh, avatar, card width)
+ * Scale ít hơn để tránh quá to trên tablet
+ */
+export const responsiveSize = (size: number): number =>
+  moderateScale(size, 0.3);
+
+/**
+ * Border radius
+ */
+export const responsiveRadius = (size: number): number =>
+  moderateScale(size, 0.3);
+
+/**
+ * Normalize theo pixel density
+ * Dùng cho border width, shadow
+ */
+export const normalize = (size: number): number =>
+  Math.round(PixelRatio.roundToNearestPixel(moderateScale(size, 0.25)));

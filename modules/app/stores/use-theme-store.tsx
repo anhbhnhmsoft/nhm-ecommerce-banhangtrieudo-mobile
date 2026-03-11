@@ -41,7 +41,7 @@ export const useThemeStore = create<ThemeStore>((set) => ({
     },
     base: {
       1: "#FFFFFF",
-      2: "#032B12",
+      2: "#000000",
       3: "#C8C8C8",
       4: "#F5F5F5",
       5: "#A1A1A1",
