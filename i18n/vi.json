@@ -1,4 +1,8 @@
 {
+  "common": {
+    "greeting": "Xin chào {{name}}!",
+    "greeting_subtitle": "Chào mừng bạn đến với TVH"
+  },
   "auth": {
     "login": {
       "title": "Đăng nhập",
@@ -107,5 +111,19 @@
         "confirm_mismatch": "Mật khẩu xác nhận không khớp"
       }
     }
+  },
+  "home": {
+    "search_placeholder": "Tìm sản phẩm, dịch vụ...",
+    "banner_title": "Ưu đãi dịch vụ thiết kế",
+    "banner_subtitle": "Giảm ngay 20% cho hợp đồng đầu tiên",
+    "banner_button": "Xem ngay",
+    "section_professional": "Dịch vụ chuyên nghiệp",
+    "section_explore": "Khám phá sản phẩm",
+    "section_featured": "Sản phẩm nổi bật",
+    "section_featured_more": "Xem thêm",
+    "section_service": "Dịch vụ tiêu biểu",
+    "section_register": "Đăng ký đăng tin",
+    "register_desc": "Nếu bạn muốn bán sản phẩm hoặc cung cấp dịch vụ → đăng ký tác tác",
+    "register_button": "Đăng ký đăng tin"
   }
 }
