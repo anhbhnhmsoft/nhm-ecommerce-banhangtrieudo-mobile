@@ -6,7 +6,8 @@
     "see_more": "Xem thêm",
     "collapse": "Rút gọn",
     "contact": "Liên hệ",
-    "reviews": "đánh giá"
+    "reviews": "đánh giá",
+    "see_all": "Xem tất cả"
   },
   "auth": {
     "login": {
@@ -152,5 +153,40 @@
     "description_title": "Mô tả dịch vụ",
     "policy_title": "Chính sách dịch vụ",
     "book_now": "Đặt ngay"
+  },
+  "profile": {
+    "info_title": "Thông tin cá nhân",
+    "edit": "Chỉnh sửa",
+    "logout": "Đăng xuất",
+    "version": "Phiên bản",
+    "history": {
+      "title": "Lịch sử",
+      "orders": "Đơn hàng",
+      "bookings": "Đặt lịch"
+    },
+    "order_status": {
+      "pending": "Chờ duyệt",
+      "delivering": "Đang giao",
+      "done": "Hoàn thành",
+      "cancelled": "Đã huỷ"
+    },
+    "settings": {
+      "title": "Cài đặt",
+      "account": "Tài khoản",
+      "change_info": "Chỉnh sửa thông tin",
+      "change_pin": "Đổi mã khóa",
+      "general": "Chung",
+      "notifications": "Thông báo",
+      "language": "Ngôn ngữ",
+      "support": "Khác",
+      "user_guide": "Trung tâm trợ giúp",
+      "terms": "Điều khoản sử dụng",
+      "privacy": "Chính sách bảo mật"
+    },
+    "fields": {
+      "name": "Họ và tên",
+      "email": "Email",
+      "phone": "Số điện thoại"
+    }
   }
 }

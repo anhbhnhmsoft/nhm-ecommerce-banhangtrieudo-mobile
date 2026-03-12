@@ -8,8 +8,8 @@ import {
 } from "@/lib/utils";
 import { useThemeStore } from "@/modules/app/stores";
 import { TabKey } from "@/modules/app/utils/type";
+import { Feather, Ionicons } from "@expo/vector-icons";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import React from "react";
 import { Platform, StyleSheet, TouchableOpacity, View } from "react-native";
@@ -39,7 +39,7 @@ export const TABS: TabItem[] = [
     key: "products",
     label: "Sản phẩm",
     icon: (color, size) => (
-      <FontAwesome6 name="list-ul" size={size} color={color} />
+      <Feather name="shopping-bag" size={size} color={color} />
     ),
   },
   {
@@ -54,10 +54,10 @@ export const TABS: TabItem[] = [
     ),
   },
   {
-    key: "account",
-    label: "Tài khoản",
+    key: "news",
+    label: "Tin tức",
     icon: (color, size) => (
-      <FontAwesome name="user-circle-o" size={size} color={color} />
+      <Ionicons name="newspaper-outline" size={size} color={color} />
     ),
   },
 ];

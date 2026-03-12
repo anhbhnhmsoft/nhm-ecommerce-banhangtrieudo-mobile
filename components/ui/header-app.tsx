@@ -37,7 +37,10 @@ export const HeaderApp = ({ showProfile = true }: Props) => {
     >
       {/* Avatar */}
       {showProfile ? (
-        <TouchableOpacity activeOpacity={0.8}>
+        <TouchableOpacity
+          activeOpacity={0.8}
+          onPress={() => router.push("/(app)/(authenticate)/profile")}
+        >
           <Image
             source={{ uri: "https://i.pravatar.cc/150?img=47" }}
             style={styles.avatar}
