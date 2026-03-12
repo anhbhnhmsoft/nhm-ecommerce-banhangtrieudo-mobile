@@ -114,6 +114,10 @@ const Box = (props: BoxProps) => {
     overflow,
     width,
     height,
+    topLeftRadius,
+    topRightRadius,
+    bottomLeftRadius,
+    bottomRightRadius,
   } = props;
 
   return (
@@ -154,6 +158,10 @@ const Box = (props: BoxProps) => {
           overflow: overflow ?? undefined,
           width: width ?? undefined,
           height: height ?? undefined,
+          borderTopLeftRadius: topLeftRadius ?? radius ?? 0,
+          borderTopRightRadius: topRightRadius ?? radius ?? 0,
+          borderBottomLeftRadius: bottomLeftRadius ?? radius ?? 0,
+          borderBottomRightRadius: bottomRightRadius ?? radius ?? 0,
         },
       ]}
     >

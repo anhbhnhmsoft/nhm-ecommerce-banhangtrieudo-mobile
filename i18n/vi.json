@@ -207,5 +207,28 @@
     "website": "Website",
     "working_hours": "Giờ làm việc",
     "contact_cooperation": "Liên hệ hợp tác"
+  },
+  "cart": {
+    "title": "Giỏ hàng",
+    "coupon": {
+      "placeholder": "Nhập mã giảm giá",
+      "apply": "Áp dụng"
+    },
+    "summary": {
+      "subtotal": "Tạm tính",
+      "shipping": "Phí vận chuyển",
+      "total": "Tổng thanh toán"
+    },
+    "checkout": "Thanh toán",
+    "empty": {
+      "title": "Giỏ hàng của bạn đang trống",
+      "description": "Hiện tại bạn chưa có sản phẩm nào trong giỏ hàng. Hãy bắt đầu mua sắm để chọn cho mình những món đồ ưng ý nhé.",
+      "continueShopping": "Tiếp tục mua sắm",
+      "viewWishlist": "Xem danh sách yêu thích",
+      "promo": {
+        "badge": "ƯU ĐÃI",
+        "description": "Giảm 10% cho đơn đầu tiên"
+      }
+    }
   }
 }

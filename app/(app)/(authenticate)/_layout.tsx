@@ -6,6 +6,7 @@ export default function LayoutAuthenticate() {
     <>
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="profile" />
+        <Stack.Screen name="carts" />
       </Stack>
     </>
   );

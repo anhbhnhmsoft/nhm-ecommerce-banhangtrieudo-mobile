@@ -80,6 +80,7 @@ export const HeaderApp = ({ showProfile = true }: Props) => {
         activeOpacity={0.7}
         style={styles.iconBtn}
         hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+        onPress={() => router.push("/(app)/(authenticate)/carts")}
       >
         <FontAwesome
           name="shopping-cart"
