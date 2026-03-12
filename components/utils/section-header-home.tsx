@@ -50,7 +50,7 @@ export const HomeHeader = () => {
         paddingHorizontal={responsiveSpacing(16)}
         marginTop={responsiveSpacingVertical(20)}
       >
-        <TextLabel title={t("home.section_professional")} />
+        <TextLabel title={t("home.section_explore")} />
         <FlatList
           data={productCategories}
           horizontal
@@ -68,7 +68,8 @@ export const HomeHeader = () => {
         paddingHorizontal={responsiveSpacing(16)}
         marginTop={responsiveSpacingVertical(20)}
       >
-        <TextLabel title={t("home.section_explore")} />
+        <TextLabel title={t("home.section_professional")} />
+
         <FlatList
           data={serviceCategories}
           horizontal

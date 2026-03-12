@@ -161,7 +161,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     paddingVertical: responsiveSpacingVertical(4),
-    minHeight: responsiveSpacingVertical(56),
   },
   centerButton: {
     width: responsiveSpacing(54),

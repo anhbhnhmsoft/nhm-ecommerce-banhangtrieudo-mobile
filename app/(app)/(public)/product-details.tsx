@@ -1,4 +1,4 @@
-import { BoxShadow, DefaultColor, HeaderApp } from "@/components/ui";
+import { BoxShadow, DefaultColor, HeaderApp, TextLabel } from "@/components/ui";
 import Box from "@/components/ui/box";
 import Typo from "@/components/ui/typo";
 import {
@@ -24,6 +24,7 @@ import {
   Zap,
 } from "lucide-react-native";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { ScrollView, StyleSheet, TouchableOpacity } from "react-native";
 
 const MOCK_PRODUCT = {
@@ -45,45 +46,46 @@ const MOCK_PRODUCT = {
   ],
 };
 
-const POLICIES = [
-  {
-    icon: BadgeCheck,
-    color: "#00A63E",
-    title: "Sản phẩm chính hãng",
-    desc: "100% nguồn gốc rõ ràng, cam kết chất lượng từ nhà sản xuất",
-  },
-  {
-    icon: Truck,
-    color: "#2B7FFF",
-    title: "Giao hàng toàn quốc",
-    desc: "Đóng gói cẩn thận, giao nhanh 2–4 ngày làm việc",
-  },
-  {
-    icon: RefreshCcw,
-    color: "#FF6900",
-    title: "Đổi trả trong 7 ngày",
-    desc: "Hoàn tiền 100% nếu sản phẩm lỗi hoặc không đúng mô tả",
-  },
-  {
-    icon: ShieldCheck,
-    color: "#D4AF37",
-    title: "Thanh toán an toàn",
-    desc: "Hỗ trợ COD, chuyển khoản, ví điện tử — bảo mật tuyệt đối",
-  },
-  {
-    icon: ScrollText,
-    color: "#E7000B",
-    title: "Hỗ trợ 24/7",
-    desc: "Đội ngũ CSKH luôn sẵn sàng tư vấn và giải đáp mọi thắc mắc",
-  },
-];
-
 // ─── Main Screen ──────────────────────────────────────────────────────────────
 
 export default function ProductDetail() {
+  const { t } = useTranslation();
   const theme = useThemeStore((s) => s.colors);
   const [isLoading] = useState(false);
   const p = MOCK_PRODUCT;
+
+  const policies = [
+    {
+      icon: BadgeCheck,
+      color: "#00A63E",
+      title: t("product.policy.genuine"),
+      desc: "100% nguồn gốc rõ ràng, cam kết chất lượng từ nhà sản xuất",
+    },
+    {
+      icon: Truck,
+      color: "#2B7FFF",
+      title: t("product.policy.shipping"),
+      desc: "Đóng gói cẩn thận, giao nhanh 2–4 ngày làm việc",
+    },
+    {
+      icon: RefreshCcw,
+      color: "#FF6900",
+      title: t("product.policy.returns"),
+      desc: "Hoàn tiền 100% nếu sản phẩm lỗi hoặc không đúng mô tả",
+    },
+    {
+      icon: ShieldCheck,
+      color: "#D4AF37",
+      title: t("product.policy.secure_payment"),
+      desc: "Hỗ trợ COD, chuyển khoản, ví điện tử — bảo mật tuyệt đối",
+    },
+    {
+      icon: ScrollText,
+      color: "#E7000B",
+      title: t("product.policy.support"),
+      desc: "Đội ngũ CSKH luôn sẵn sàng tư vấn và giải đáp mọi thắc mắc",
+    },
+  ];
 
   return (
     <ScrollView
@@ -135,7 +137,7 @@ export default function ProductDetail() {
                   weight="700"
                   marginLeft={responsiveSpacing(3)}
                 >
-                  MỚI
+                  {t("product.new")}
                 </Typo>
               </Box>
             )}
@@ -155,7 +157,7 @@ export default function ProductDetail() {
                   weight="700"
                   marginLeft={responsiveSpacing(3)}
                 >
-                  Nổi bật
+                  {t("product.featured")}
                 </Typo>
               </Box>
             )}
@@ -257,7 +259,7 @@ export default function ProductDetail() {
                 weight="700"
                 marginLeft={responsiveSpacing(6)}
               >
-                Thêm vào giỏ
+                {t("product.add_to_cart")}
               </Typo>
             </TouchableOpacity>
 
@@ -275,7 +277,7 @@ export default function ProductDetail() {
                 weight="700"
                 marginLeft={responsiveSpacing(6)}
               >
-                Mua ngay
+                {t("product.buy_now")}
               </Typo>
             </TouchableOpacity>
           </Box>
@@ -287,14 +289,7 @@ export default function ProductDetail() {
           padding={responsiveSpacing(16)}
           style={{ marginBottom: responsiveSpacingVertical(12) }}
         >
-          <Typo
-            fontSize={responsiveFont(15)}
-            color={theme.base[2]}
-            weight="700"
-            marginBottom={responsiveSpacingVertical(10)}
-          >
-            Mô tả sản phẩm
-          </Typo>
+          <TextLabel title={t("product.description_title")} />
           <Typo
             fontSize={responsiveFont(13)}
             color={theme.base[5]}
@@ -311,23 +306,14 @@ export default function ProductDetail() {
           style={{ marginBottom: responsiveSpacingVertical(32) }}
         >
           {/* Header */}
-          <Box
-            flexDirection="row"
-            alignItems="center"
-            marginBottom={responsiveSpacingVertical(14)}
-          >
-            <ShieldCheck size={responsiveIcon(18)} color={theme.primary[2]} />
-            <Typo
-              fontSize={responsiveFont(15)}
-              color={theme.base[2]}
-              weight="700"
-              marginLeft={responsiveSpacing(8)}
-            >
-              Chính sách mua hàng
-            </Typo>
-          </Box>
+          <TextLabel
+            iconLeft={
+              <ShieldCheck size={responsiveIcon(18)} color={theme.primary[2]} />
+            }
+            title={t("product.policy_title")}
+          />
 
-          {POLICIES.map((policy, i) => {
+          {policies.map((policy, i) => {
             const Icon = policy.icon;
             return (
               <Box
@@ -335,7 +321,7 @@ export default function ProductDetail() {
                 flexDirection="row"
                 alignItems="flex-start"
                 marginBottom={
-                  i < POLICIES.length - 1 ? responsiveSpacingVertical(14) : 0
+                  i < policies.length - 1 ? responsiveSpacingVertical(14) : 0
                 }
               >
                 {/* Icon circle */}

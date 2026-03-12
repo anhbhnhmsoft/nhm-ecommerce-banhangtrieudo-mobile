@@ -119,12 +119,28 @@
     "banner_subtitle": "Giảm ngay 20% cho hợp đồng đầu tiên",
     "banner_button": "Xem ngay",
     "section_professional": "Dịch vụ chuyên nghiệp",
-    "section_explore": "Khám phá sản phẩm",
+    "section_explore": "Danh mục sản phẩm",
     "section_featured": "Sản phẩm nổi bật",
+    "consumer_products": "Sản phẩm tiêu dùng",
     "section_featured_more": "Xem thêm",
     "section_service": "Dịch vụ tiêu biểu",
     "section_register": "Đăng ký đăng tin",
     "register_desc": "Nếu bạn muốn bán sản phẩm hoặc cung cấp dịch vụ → đăng ký tác tác",
     "register_button": "Đăng ký đăng tin"
+  },
+  "product": {
+    "new": "MỚI",
+    "featured": "Nổi bật",
+    "description_title": "Mô tả sản phẩm",
+    "policy_title": "Chính sách mua hàng",
+    "add_to_cart": "Thêm vào giỏ",
+    "buy_now": "Mua ngay",
+    "policy": {
+      "genuine": "Sản phẩm chính hãng",
+      "shipping": "Giao hàng toàn quốc",
+      "returns": "Đổi trả trong 7 ngày",
+      "secure_payment": "Thanh toán an toàn",
+      "support": "Hỗ trợ 24/7"
+    }
   }
 }

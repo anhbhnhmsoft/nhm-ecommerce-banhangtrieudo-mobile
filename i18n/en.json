@@ -13,5 +13,20 @@
       "no_account": "Don't have an account?",
       "register_now": "Register now"
     }
+  },
+  "product": {
+    "new": "NEW",
+    "featured": "Featured",
+    "description_title": "Product description",
+    "policy_title": "Purchase policy",
+    "add_to_cart": "Add to cart",
+    "buy_now": "Buy now",
+    "policy": {
+      "genuine": "Genuine product",
+      "shipping": "Nationwide delivery",
+      "returns": "7‑day return",
+      "secure_payment": "Secure payment",
+      "support": "24/7 support"
+    }
   }
 }
