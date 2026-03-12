@@ -2,7 +2,11 @@
   "common": {
     "greeting": "Xin chào {{name}}!",
     "greeting_subtitle": "Chào mừng bạn đến với TVH",
-    "details": "Chi tiết"
+    "details": "Chi tiết",
+    "see_more": "Xem thêm",
+    "collapse": "Rút gọn",
+    "contact": "Liên hệ",
+    "reviews": "đánh giá"
   },
   "auth": {
     "login": {
@@ -135,6 +139,7 @@
     "policy_title": "Chính sách mua hàng",
     "add_to_cart": "Thêm vào giỏ",
     "buy_now": "Mua ngay",
+    "seller_info": "Thông tin người bán",
     "policy": {
       "genuine": "Sản phẩm chính hãng",
       "shipping": "Giao hàng toàn quốc",
@@ -142,5 +147,10 @@
       "secure_payment": "Thanh toán an toàn",
       "support": "Hỗ trợ 24/7"
     }
+  },
+  "services": {
+    "description_title": "Mô tả dịch vụ",
+    "policy_title": "Chính sách dịch vụ",
+    "book_now": "Đặt ngay"
   }
 }

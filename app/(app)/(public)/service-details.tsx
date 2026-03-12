@@ -15,16 +15,13 @@ import { useThemeStore } from "@/modules/app/stores";
 import { Carousel } from "@/modules/products/components/list-carose-image-product";
 import {
   BadgeCheck,
+  CalendarDays,
   ChevronDown,
   ChevronUp,
-  RefreshCcw,
-  ScrollText,
+  Clock,
   ShieldCheck,
-  ShoppingCart,
   Sparkles,
   Star,
-  Truck,
-  Zap,
 } from "lucide-react-native";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -37,70 +34,65 @@ import {
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-const MOCK_PRODUCT = {
+// ─── Mock Data ────────────────────────────────────────────────────────────────
+
+const MOCK_SERVICE = {
   id: "1",
-  title: "Cafe Arabica Nguyên Chất Cao Cấp 500g",
-  rating: 4.8,
-  reviewCount: 234,
-  price: "250.000 VND",
-  originalPrice: "320.000 VND",
+  title: "Chăm Sóc Da Mặt Chuyên Sâu Premium",
+  category: "Chăm sóc da",
+  rating: 4.9,
+  reviewCount: 186,
+  duration: "90 phút",
+  price: "450.000 VND",
+  originalPrice: "600.000 VND",
   isNew: true,
   isFeatured: true,
   description:
-    "Cafe Arabica nguyên chất 100% từ vùng cao Đà Lạt. Hương thơm đặc trưng, vị chua nhẹ tự nhiên, không pha tạp chất. Rang xay theo đơn đặt hàng, đảm bảo độ tươi ngon tối đa. Phù hợp pha pour-over, cold brew hoặc máy espresso. Được thu hoạch thủ công, lựa chọn kỹ từng hạt chín đỏ, qua quá trình chế biến ướt truyền thống giúp giữ trọn hương vị tự nhiên.",
+    "Liệu trình chăm sóc da mặt chuyên sâu với công nghệ hiện đại, giúp làm sạch sâu, dưỡng ẩm và tái tạo da. Sử dụng các sản phẩm cao cấp từ Pháp, phù hợp với mọi loại da. Sau liệu trình, da trở nên mềm mịn, căng bóng và rạng rỡ. Được thực hiện bởi chuyên viên có chứng chỉ quốc tế với hơn 5 năm kinh nghiệm.",
   images: [
-    "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800",
-    "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800",
-    "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800",
-    "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800",
+    "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800",
+    "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800",
+    "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800",
+    "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800",
   ],
   seller: {
-    name: "Cafe Đà Lạt Official",
+    name: "Bella Spa & Beauty",
     phone: "0901 234 567",
     avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200",
+      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200",
     verified: true,
   },
+  address: "123 Nguyễn Huệ, Q.1, TP.HCM",
 };
 
-export default function ProductDetail() {
+// ─── Main Screen ──────────────────────────────────────────────────────────────
+
+export default function ServiceDetail() {
   const { t } = useTranslation();
   const theme = useThemeStore((s) => s.colors);
   const insets = useSafeAreaInsets();
   const [isLoading] = useState(false);
   const [descExpanded, setDescExpanded] = useState(false);
-  const p = MOCK_PRODUCT;
+  const s = MOCK_SERVICE;
 
   const policies = [
     {
       icon: BadgeCheck,
       color: "#00A63E",
-      title: t("product.policy.genuine"),
-      desc: "100% nguồn gốc rõ ràng, cam kết chất lượng từ nhà sản xuất",
-    },
-    {
-      icon: Truck,
-      color: "#2B7FFF",
-      title: t("product.policy.shipping"),
-      desc: "Đóng gói cẩn thận, giao nhanh 2–4 ngày làm việc",
-    },
-    {
-      icon: RefreshCcw,
-      color: "#FF6900",
-      title: t("product.policy.returns"),
-      desc: "Hoàn tiền 100% nếu sản phẩm lỗi hoặc không đúng mô tả",
+      title: "Chuyên viên được đào tạo bài bản",
+      desc: "100% chuyên viên có chứng chỉ quốc tế, kinh nghiệm từ 3 năm trở lên",
     },
     {
       icon: ShieldCheck,
       color: "#D4AF37",
-      title: t("product.policy.secure_payment"),
-      desc: "Hỗ trợ COD, chuyển khoản, ví điện tử — bảo mật tuyệt đối",
+      title: "Sản phẩm cao cấp, an toàn",
+      desc: "Sử dụng mỹ phẩm nhập khẩu chính hãng, kiểm định da liễu",
     },
     {
-      icon: ScrollText,
-      color: "#E7000B",
-      title: t("product.policy.support"),
-      desc: "Đội ngũ CSKH luôn sẵn sàng tư vấn và giải đáp mọi thắc mắc",
+      icon: Clock,
+      color: "#2B7FFF",
+      title: "Đúng giờ, tôn trọng thời gian",
+      desc: "Cam kết phục vụ đúng lịch hẹn, không để khách chờ",
     },
   ];
 
@@ -117,10 +109,10 @@ export default function ProductDetail() {
 
         {/* Carousel — không sửa */}
         <Carousel
-          images={p.images}
+          images={s.images}
           isLoading={isLoading}
-          isNew={p.isNew}
-          isFeatured={p.isFeatured}
+          isNew={s.isNew}
+          isFeatured={s.isFeatured}
         />
 
         <Box
@@ -139,7 +131,24 @@ export default function ProductDetail() {
               marginBottom={responsiveSpacingVertical(10)}
               style={{ gap: responsiveSpacing(8) }}
             >
-              {p.isNew && (
+              <Box
+                flexDirection="row"
+                alignItems="center"
+                backgroundColor="#E8F4FD"
+                paddingHorizontal={responsiveSpacing(8)}
+                paddingVertical={responsiveSpacingVertical(3)}
+                radius={999}
+              >
+                <Typo
+                  fontSize={responsiveFont(10)}
+                  color="#2B7FFF"
+                  weight="600"
+                >
+                  {s.category}
+                </Typo>
+              </Box>
+
+              {s.isNew && (
                 <Box
                   flexDirection="row"
                   alignItems="center"
@@ -163,7 +172,8 @@ export default function ProductDetail() {
                   </Typo>
                 </Box>
               )}
-              {p.isFeatured && (
+
+              {s.isFeatured && (
                 <Box
                   flexDirection="row"
                   alignItems="center"
@@ -193,38 +203,60 @@ export default function ProductDetail() {
               lineHeight={responsiveFont(26)}
               marginBottom={responsiveSpacingVertical(10)}
             >
-              {p.title}
+              {s.title}
             </Typo>
 
-            {/* Rating */}
+            {/* Rating + Duration */}
             <Box
               flexDirection="row"
               alignItems="center"
+              justifyContent="space-between"
               marginBottom={responsiveSpacingVertical(12)}
             >
-              {[1, 2, 3, 4, 5].map((i) => (
-                <Star
-                  key={i}
-                  size={responsiveIcon(13)}
-                  color="#D4AF37"
-                  fill={i <= Math.floor(p.rating) ? "#D4AF37" : "transparent"}
-                />
-              ))}
-              <Typo
-                fontSize={responsiveFont(13)}
-                color={theme.base[2]}
-                weight="700"
-                marginLeft={responsiveSpacing(6)}
+              <Box flexDirection="row" alignItems="center">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <Star
+                    key={i}
+                    size={responsiveIcon(13)}
+                    color="#D4AF37"
+                    fill={i <= Math.floor(s.rating) ? "#D4AF37" : "transparent"}
+                  />
+                ))}
+                <Typo
+                  fontSize={responsiveFont(13)}
+                  color={theme.base[2]}
+                  weight="700"
+                  marginLeft={responsiveSpacing(6)}
+                >
+                  {s.rating}
+                </Typo>
+                <Typo
+                  fontSize={responsiveFont(12)}
+                  color={theme.base[5]}
+                  marginLeft={responsiveSpacing(4)}
+                >
+                  ({s.reviewCount} {t("common.reviews")})
+                </Typo>
+              </Box>
+
+              <Box
+                flexDirection="row"
+                alignItems="center"
+                backgroundColor="#FFF5E6"
+                paddingHorizontal={responsiveSpacing(10)}
+                paddingVertical={responsiveSpacingVertical(4)}
+                radius={999}
               >
-                {p.rating}
-              </Typo>
-              <Typo
-                fontSize={responsiveFont(12)}
-                color={theme.base[5]}
-                marginLeft={responsiveSpacing(4)}
-              >
-                ({p.reviewCount} {t("common.reviews")})
-              </Typo>
+                <Clock size={responsiveIcon(12)} color="#FF6900" />
+                <Typo
+                  fontSize={responsiveFont(12)}
+                  color="#FF6900"
+                  weight="600"
+                  marginLeft={responsiveSpacing(4)}
+                >
+                  {s.duration}
+                </Typo>
+              </Box>
             </Box>
 
             {/* Price */}
@@ -238,21 +270,36 @@ export default function ProductDetail() {
                 color={theme.primary[2]}
                 weight="700"
               >
-                {p.price}
+                {s.price}
               </Typo>
               <Typo
                 fontSize={responsiveFont(13)}
                 color={theme.base[5]}
                 style={{ textDecorationLine: "line-through" }}
               >
-                {p.originalPrice}
+                {s.originalPrice}
               </Typo>
+              <Box
+                backgroundColor="#FEF2F2"
+                paddingHorizontal={responsiveSpacing(8)}
+                paddingVertical={responsiveSpacingVertical(2)}
+                radius={999}
+              >
+                <Typo
+                  fontSize={responsiveFont(11)}
+                  color="#E7000B"
+                  weight="700"
+                >
+                  -25%
+                </Typo>
+              </Box>
             </Box>
           </BoxShadow>
 
           {/* ── Thông tin người bán ── */}
           <SellerInfo
-            seller={p.seller}
+            seller={s.seller}
+            address={s.address}
             onContact={() => {
               /* TODO: gọi điện */
             }}
@@ -264,20 +311,20 @@ export default function ProductDetail() {
             padding={responsiveSpacing(16)}
             style={{ marginBottom: responsiveSpacingVertical(12) }}
           >
-            <TextLabel title={t("product.description_title")} />
+            <TextLabel title={t("services.description_title")} />
             <Typo
               fontSize={responsiveFont(13)}
               color={theme.base[5]}
               lineHeight={responsiveFont(22)}
               numberOfLines={descExpanded ? undefined : 3}
             >
-              {p.description}
+              {s.description}
             </Typo>
 
             <TouchableOpacity
               onPress={() => setDescExpanded(!descExpanded)}
-              style={styles.expandBtn}
               activeOpacity={0.7}
+              style={styles.expandBtn}
             >
               <Typo
                 fontSize={responsiveFont(12)}
@@ -310,9 +357,8 @@ export default function ProductDetail() {
                   color={theme.primary[2]}
                 />
               }
-              title={t("product.policy_title")}
+              title={t("services.policy_title")}
             />
-
             {policies.map((policy, i) => {
               const Icon = policy.icon;
               return (
@@ -359,7 +405,7 @@ export default function ProductDetail() {
         </Box>
       </ScrollView>
 
-      {/* ── Sticky Bottom Actions ── */}
+      {/* ── Sticky Bottom ── */}
       <View
         style={[
           styles.stickyBottom,
@@ -370,51 +416,21 @@ export default function ProductDetail() {
         ]}
       >
         <Box
-          flexDirection="row"
           paddingHorizontal={responsiveSpacing(16)}
           paddingTop={responsiveSpacingVertical(12)}
-          style={{ gap: responsiveSpacing(10) }}
         >
-          {/* Thêm giỏ hàng */}
           <TouchableOpacity
-            style={[
-              styles.actionBtn,
-              {
-                flex: 1,
-                backgroundColor: theme.primary[3],
-                borderWidth: 1.5,
-                borderColor: theme.primary[2],
-              },
-            ]}
+            style={[styles.bookBtn, { backgroundColor: theme.secondary[1] }]}
             activeOpacity={0.8}
           >
-            <ShoppingCart size={responsiveIcon(15)} color={theme.primary[2]} />
+            <CalendarDays size={responsiveIcon(16)} color="#fff" />
             <Typo
-              fontSize={responsiveFont(13)}
-              color={theme.primary[2]}
-              weight="700"
-              marginLeft={responsiveSpacing(6)}
-            >
-              {t("product.add_to_cart")}
-            </Typo>
-          </TouchableOpacity>
-
-          {/* Mua ngay */}
-          <TouchableOpacity
-            style={[
-              styles.actionBtn,
-              { flex: 1, backgroundColor: theme.secondary[1] },
-            ]}
-            activeOpacity={0.8}
-          >
-            <Zap size={responsiveIcon(15)} color="#fff" fill="#fff" />
-            <Typo
-              fontSize={responsiveFont(13)}
+              fontSize={responsiveFont(14)}
               color="#fff"
               weight="700"
-              marginLeft={responsiveSpacing(6)}
+              marginLeft={responsiveSpacing(8)}
             >
-              {t("product.buy_now")}
+              {t("services.book_now")}
             </Typo>
           </TouchableOpacity>
         </Box>
@@ -423,11 +439,9 @@ export default function ProductDetail() {
   );
 }
 
-// ─── Styles — chỉ những gì Box/View không support ────────────────────────────
-
 const styles = StyleSheet.create({
-  actionBtn: {
-    height: verticalScale(46),
+  bookBtn: {
+    height: verticalScale(50),
     borderRadius: 999,
     flexDirection: "row",
     alignItems: "center",
@@ -446,7 +460,6 @@ const styles = StyleSheet.create({
       android: { elevation: 10 },
     }),
   },
-  // TouchableOpacity không có alignSelf, gap prop
   expandBtn: {
     flexDirection: "row",
     alignItems: "center",

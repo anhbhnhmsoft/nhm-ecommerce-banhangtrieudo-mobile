@@ -6,6 +6,7 @@ export default function LayoutPublic() {
     <>
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="product-details" />
+        <Stack.Screen name="service-details" />
       </Stack>
     </>
   );
