@@ -54,6 +54,14 @@ export const TABS: TabItem[] = [
     ),
   },
   {
+    key: "contact",
+    label: "Liên hệ",
+    icon: (color, size) => (
+      <Ionicons name="call-outline" size={size} color={color} />
+    ),
+  },
+
+  {
     key: "news",
     label: "Tin tức",
     icon: (color, size) => (

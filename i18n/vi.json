@@ -200,5 +200,12 @@
       "cta": "Đăng ký ngay",
       "note": "Chúng tôi cam kết bảo mật thông tin của bạn"
     }
+  },
+  "contact": {
+    "address": "Địa chỉ",
+    "email": "Email",
+    "website": "Website",
+    "working_hours": "Giờ làm việc",
+    "contact_cooperation": "Liên hệ hợp tác"
   }
 }
