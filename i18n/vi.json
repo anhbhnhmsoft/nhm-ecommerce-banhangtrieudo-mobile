@@ -188,5 +188,17 @@
       "email": "Email",
       "phone": "Số điện thoại"
     }
+  },
+  "news": {
+    "featured_title": "Tin tức nổi bật",
+    "other_title": "Tin tức khác",
+    "read_more": "Đọc thêm »",
+    "newsletter": {
+      "title": "Đăng ký nhận tin",
+      "subtitle": "Nhận thông tin mới nhất về sản phẩm, khuyến mãi và xu hướng thiết kế",
+      "placeholder": "Nhập email của bạn...",
+      "cta": "Đăng ký ngay",
+      "note": "Chúng tôi cam kết bảo mật thông tin của bạn"
+    }
   }
 }
