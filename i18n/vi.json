@@ -7,7 +7,21 @@
     "collapse": "Rút gọn",
     "contact": "Liên hệ",
     "reviews": "đánh giá",
-    "see_all": "Xem tất cả"
+    "see_all": "Xem tất cả",
+    "months": {
+      "1": "Tháng 1",
+      "2": "Tháng 2",
+      "3": "Tháng 3",
+      "4": "Tháng 4",
+      "5": "Tháng 5",
+      "6": "Tháng 6",
+      "7": "Tháng 7",
+      "8": "Tháng 8",
+      "9": "Tháng 9",
+      "10": "Tháng 10",
+      "11": "Tháng 11",
+      "12": "Tháng 12"
+    }
   },
   "auth": {
     "login": {
@@ -152,7 +166,18 @@
   "services": {
     "description_title": "Mô tả dịch vụ",
     "policy_title": "Chính sách dịch vụ",
-    "book_now": "Đặt ngay"
+    "book_now": "Đặt ngay",
+    "book_service": {
+      "title": "Đặt dịch vụ",
+      "category": "Chăm sóc sắc đẹp",
+      "service_name": "Gói Chăm Sóc Da Hoàng Gia",
+      "service_desc": "Cung cấp bởi Golden Beauty Spa",
+      "pick_datetime": "Chọn ngày & giờ",
+      "contact_info": "Thông tin liên hệ",
+      "note_label": "Ghi chú / Địa chỉ",
+      "note_placeholder": "Yêu cầu đặc biệt cho kỹ thuật viên...",
+      "confirm_button": "Xác nhận đặt lịch"
+    }
   },
   "profile": {
     "info_title": "Thông tin cá nhân",

@@ -13,6 +13,7 @@ import {
 } from "@/lib/utils";
 import { useThemeStore } from "@/modules/app/stores";
 import { Carousel } from "@/modules/products/components/list-carose-image-product";
+import { router } from "expo-router";
 import {
   BadgeCheck,
   CalendarDays,
@@ -422,6 +423,9 @@ export default function ServiceDetail() {
           <TouchableOpacity
             style={[styles.bookBtn, { backgroundColor: theme.secondary[1] }]}
             activeOpacity={0.8}
+            onPress={() =>
+              router.push("/(app)/(authenticate)/booking-services")
+            }
           >
             <CalendarDays size={responsiveIcon(16)} color="#fff" />
             <Typo

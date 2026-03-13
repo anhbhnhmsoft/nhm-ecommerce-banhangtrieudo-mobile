@@ -118,6 +118,7 @@ const Box = (props: BoxProps) => {
     topRightRadius,
     bottomLeftRadius,
     bottomRightRadius,
+    flexWrap,
   } = props;
 
   return (
@@ -162,6 +163,7 @@ const Box = (props: BoxProps) => {
           borderTopRightRadius: topRightRadius ?? radius ?? 0,
           borderBottomLeftRadius: bottomLeftRadius ?? radius ?? 0,
           borderBottomRightRadius: bottomRightRadius ?? radius ?? 0,
+          flexWrap: flexWrap ?? undefined,
         },
       ]}
     >
