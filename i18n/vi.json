@@ -325,5 +325,26 @@
     "method_bank_or_cod": "Chuyển khoản ",
     "continue_shopping": "Tiếp tục mua sắm",
     "view_order": "Xem đơn hàng"
+  },
+  "newsletter": {
+    "header_title": "Đăng ký đăng tin",
+    "title": "Gửi yêu cầu đăng tin",
+    "desc_prefix": "Đăng tin hoàn toàn",
+    "desc_highlight": "miễn phí",
+    "desc_suffix": "Yêu cầu của bạn sẽ được quản trị viên phê duyệt trong vòng 24h để đảm bảo chất lượng nội dung.",
+    "full_name": "Họ và tên",
+    "phone": "Số điện thoại",
+    "email": "Email",
+    "service_type": "Loại dịch vụ / Sản phẩm",
+    "service_placeholder": "Chọn loại dịch vụ",
+    "submit_button": "Gửi yêu cầu đăng tin",
+    "submitting": "Đang gửi...",
+    "errors": {
+      "full_name_required": "Vui lòng nhập họ và tên",
+      "phone_invalid": "Số điện thoại không hợp lệ",
+      "phone_numbers_only": "Chỉ nhập số",
+      "email_invalid": "Email không hợp lệ",
+      "service_required": "Vui lòng chọn loại dịch vụ"
+    }
   }
 }

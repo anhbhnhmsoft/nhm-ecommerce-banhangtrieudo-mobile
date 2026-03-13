@@ -9,6 +9,9 @@ export default function AppLayout() {
       }}
     >
       <Stack.Screen name="(tabs)" />
+      <Stack.Screen name="(authenticate)" />
+      <Stack.Screen name="(public)" />
+      <Stack.Screen name="(services)" />
     </Stack>
   );
 }

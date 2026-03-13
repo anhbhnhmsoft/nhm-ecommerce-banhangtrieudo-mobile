@@ -8,6 +8,7 @@ import {
 import { useThemeStore } from "@/modules/app/stores";
 import { ProductCard } from "@/modules/products/components";
 import { FEATURED_DATA } from "@/modules/products/utils";
+import { router } from "expo-router";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { FlatList, StyleSheet, TouchableOpacity } from "react-native";
@@ -67,6 +68,7 @@ export const HomeFooter = () => {
         <TouchableOpacity
           style={[styles.registerBtn, { backgroundColor: theme.primary[2] }]}
           activeOpacity={0.85}
+          onPress={() => router.push("/(app)/(customer)/seller-registration")}
         >
           <Typo
             weight="700"
