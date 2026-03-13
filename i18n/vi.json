@@ -346,5 +346,36 @@
       "email_invalid": "Email không hợp lệ",
       "service_required": "Vui lòng chọn loại dịch vụ"
     }
+  },
+  "purchasedProducts": {
+    "title": "Sản phẩm đã mua",
+    "tabs": {
+      "all": "Tất cả",
+      "processing": "Đang xử lý",
+      "delivered": "Đã giao"
+    },
+    "status": {
+      "processing": "ĐANG XỬ LÝ",
+      "delivered": "ĐÃ GIAO"
+    },
+    "purchaseDate": "Ngày mua: {{date}}",
+    "orderDate": "Ngày đặt: {{date}}",
+    "buyAgain": "Mua lại"
+  },
+  "bookingHistory": {
+    "title": "Lịch sử đặt lịch",
+    "tabs": {
+      "all": "Tất cả",
+      "confirmed": "Đã xác nhận",
+      "pending": "Đang chờ",
+      "cancelled": "Đã hủy"
+    },
+    "status": {
+      "confirmed": "ĐÃ XÁC NHẬN",
+      "pending": "ĐANG CHỜ",
+      "cancelled": "ĐÃ HỦY"
+    },
+    "totalPayment": "TỔNG THANH TOÁN",
+    "detail": "Chi tiết"
   }
 }

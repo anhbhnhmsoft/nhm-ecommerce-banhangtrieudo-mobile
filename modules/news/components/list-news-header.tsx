@@ -50,7 +50,7 @@ export const FeaturedNewsList = ({
           paddingHorizontal={PADDING_H}
           marginBottom={responsiveSpacingVertical(12)}
         >
-          <TextLabel title={t("news.featured.title")} />
+          <TextLabel title={t("news.featured_title")} />
         </Box>
         <Carousel
           width={SCREEN_WIDTH}

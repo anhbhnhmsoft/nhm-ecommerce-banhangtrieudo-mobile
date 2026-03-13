@@ -16,8 +16,8 @@ import {
   ScrollView,
   StyleSheet,
   TouchableOpacity,
+  View,
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function RegisterNewsletterScreen() {
   const theme = useThemeStore((s) => s.colors);
@@ -31,9 +31,7 @@ export default function RegisterNewsletterScreen() {
   } = form;
 
   return (
-    <SafeAreaView
-      style={[styles.safeArea, { backgroundColor: theme.primary[1] }]}
-    >
+    <View style={[styles.safeArea, { backgroundColor: theme.primary[1] }]}>
       <HeaderBack title={t("newsletter.header_title")} />
       <KeyboardAvoidingView
         style={{ flex: 1 }}
@@ -163,7 +161,7 @@ export default function RegisterNewsletterScreen() {
           </TouchableOpacity>
         </ScrollView>
       </KeyboardAvoidingView>
-    </SafeAreaView>
+    </View>
   );
 }
 

@@ -72,12 +72,7 @@ export default function PaymentScreen() {
   ];
 
   return (
-    <View
-      style={[
-        styles.container,
-        { backgroundColor: theme.primary[1], paddingTop: insets.top },
-      ]}
-    >
+    <View style={[styles.container, { backgroundColor: theme.primary[1] }]}>
       <HeaderBack title={t("payment.title")} />
 
       <ScrollView

@@ -11,6 +11,8 @@ export default function LayoutAuthenticate() {
         <Stack.Screen name="oders-success" />
         <Stack.Screen name="services" />
         <Stack.Screen name="booking-services" />
+        <Stack.Screen name="order-history" />
+        <Stack.Screen name="booking-history" />
       </Stack>
     </>
   );

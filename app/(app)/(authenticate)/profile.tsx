@@ -14,6 +14,7 @@ import {
   SettingsSection,
   UserInfoCard,
 } from "@/modules/profile/components";
+import { router } from "expo-router";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ScrollView, View } from "react-native";
@@ -107,6 +108,12 @@ export default function ProfileScreen() {
               onTabChange={setActiveTab}
               orders={MOCK_ORDERS}
               bookings={MOCK_BOOKINGS}
+              onSeeAllOrders={() =>
+                router.push("/(app)/(authenticate)/order-history")
+              }
+              onSeeAllBookings={() =>
+                router.push("/(app)/(authenticate)/booking-history")
+              }
             />
           </Box>
 

@@ -51,7 +51,10 @@ export default function Login() {
           showsVerticalScrollIndicator={false}
         >
           {/* Header */}
-          <HeaderBack showBack={false} title={t("auth.login.title")} />
+          <HeaderBack
+            backgroudColor="transparent"
+            title={t("auth.login.title")}
+          />
           {/* Body */}
           <Box
             flex={1}

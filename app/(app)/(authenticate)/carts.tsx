@@ -95,7 +95,6 @@ export default function CartScreen() {
         style={{
           flex: 1,
           backgroundColor: theme.primary[1],
-          paddingTop: insets.top,
         }}
       >
         <HeaderBack title={t("cart.title")} />

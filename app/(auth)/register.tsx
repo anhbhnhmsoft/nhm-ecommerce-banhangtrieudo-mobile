@@ -57,7 +57,10 @@ export default function Register() {
           showsVerticalScrollIndicator={false}
         >
           {/* Header */}
-          <HeaderBack title={t("auth.register.title")} />
+          <HeaderBack
+            backgroudColor="transparent"
+            title={t("auth.register.title")}
+          />
 
           {/* Body */}
           <Box

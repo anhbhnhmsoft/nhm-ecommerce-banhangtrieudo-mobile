@@ -37,7 +37,6 @@ export default function BookServiceScreen() {
         styles.container,
         {
           backgroundColor: theme.primary[1],
-          paddingTop: insets.top,
         },
       ]}
     >

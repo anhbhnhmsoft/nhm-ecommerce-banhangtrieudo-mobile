@@ -48,7 +48,6 @@ export default function OrderSuccessScreen() {
         styles.container,
         {
           backgroundColor: theme.primary[1],
-          paddingTop: insets.top,
           paddingBottom: insets.bottom || responsiveSpacingVertical(20),
         },
       ]}
