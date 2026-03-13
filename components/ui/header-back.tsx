@@ -17,6 +17,7 @@ interface HeaderBackProps {
   onPress?: () => void;
   showBack?: boolean;
   rightComponent?: React.ReactNode;
+  onBack?: () => void;
 }
 
 export default function HeaderBack({
@@ -24,6 +25,7 @@ export default function HeaderBack({
   onPress,
   showBack = true,
   rightComponent,
+  onBack,
 }: HeaderBackProps) {
   const theme = useThemeStore((state) => state.colors);
 
@@ -39,7 +41,7 @@ export default function HeaderBack({
       {showBack && (
         <Box position="absolute" left={responsiveSpacing(16)}>
           <TouchableOpacity
-            onPress={() => router.back()}
+            onPress={() => (onBack ? onBack() : router.back())}
             hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
           >
             <ChevronLeft size={responsiveIcon(24)} color={theme.base[2]} />

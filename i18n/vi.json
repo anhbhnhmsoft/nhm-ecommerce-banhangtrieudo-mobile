@@ -230,5 +230,62 @@
         "description": "Giảm 10% cho đơn đầu tiên"
       }
     }
+  },
+  "payment": {
+    "title": "Thanh toán",
+    "shipping_address": {
+      "label": "Địa chỉ nhận hàng",
+      "change": "Thay đổi"
+    },
+    "payment_method": {
+      "label": "Phương thức thanh toán",
+      "bank_transfer": {
+        "title": "Chuyển khoản ngân hàng",
+        "subtitle": "Xác nhận nhanh chóng"
+      },
+      "cod": {
+        "title": "Thanh toán khi nhận hàng (COD)",
+        "subtitle": "Thanh toán bằng tiền mặt"
+      }
+    },
+    "order_summary": {
+      "label": "Tóm tắt đơn hàng",
+      "subtotal": "Tạm tính ({{count}} sản phẩm)",
+      "shipping_fee": "Phí vận chuyển",
+      "voucher_discount": "Giảm giá voucher",
+      "total": "Tổng cộng"
+    },
+    "confirm_button": "Xác nhận thanh toán",
+    "disclaimer": "Bằng việc nhấn \"Xác nhận thanh toán\" bạn đồng ý với các\nĐiều khoản & Chính sách của chúng tôi."
+  },
+  "location": {
+    "title": "Địa chỉ đã lưu",
+    "description": "Lưu lại địa chỉ yêu thích",
+    "common_address": "Bạn thường đặt dịch vụ tại địa chỉ nào?",
+    "add_new_address": "Thêm địa chỉ mới",
+    "search_placeholder": "Nhập địa chỉ...",
+    "no_result": "Không có kết quả nào",
+    "title_add": "Thêm địa chỉ",
+    "title_edit": "Chỉnh sửa địa chỉ",
+    "label_address": "Địa chỉ / Vị trí",
+    "placeholder_address": "Nhấn để tìm kiếm địa chỉ...",
+    "label_desc": "Ghi chú (Ví dụ: Nhà riêng, Cty)",
+    "placeholder_desc": "Nhập ghi chú (Tuỳ chọn)",
+    "is_primary": "Đặt làm địa chỉ mặc định",
+    "is_primary_desc": "Địa chỉ mặc định sẽ được chọn khi bạn đặt dịch vụ",
+    "save_address": "Lưu địa chỉ",
+    "primary": "Mặc định",
+    "primary_address": "Địa chỉ hiện tại",
+    "no_desc": "Không có ghi chú",
+    "get_current_location": "Lấy vị trí hiện tại",
+    "loading": "Đang xử lý...",
+    "need_location": "Chưa có địa chỉ mặc định.",
+    "getting_location": "Đang lấy vị trí hiện tại...",
+    "error": {
+      "title": "Lỗi địa chỉ",
+      "invalid_address": "Vui lòng chọn địa chỉ hợp lệ từ gợi ý",
+      "invalid_location": "Vui lòng chọn toạ độ hợp lệ",
+      "current_location_failed": "Không thể lấy vị trí hiện tại, vui lòng thử lại sau."
+    }
   }
 }

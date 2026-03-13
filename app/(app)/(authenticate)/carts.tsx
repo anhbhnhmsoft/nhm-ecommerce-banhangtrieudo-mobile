@@ -11,6 +11,7 @@ import {
 import { useThemeStore } from "@/modules/app/stores/use-theme-store";
 import { CartItem } from "@/modules/cart/components";
 import EmptyCart from "@/modules/cart/components/cart-emty";
+import { router } from "expo-router";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
@@ -228,7 +229,10 @@ export default function CartScreen() {
             <Box height={responsiveSpacingVertical(16)} />
 
             {/* Nút THANH TOÁN */}
-            <TouchableOpacity onPress={() => {}} activeOpacity={0.85}>
+            <TouchableOpacity
+              onPress={() => router.push("/(app)/(authenticate)/payment")}
+              activeOpacity={0.85}
+            >
               <Box
                 backgroundColor={theme.primary[2]}
                 radius={responsiveRadius(30)}
