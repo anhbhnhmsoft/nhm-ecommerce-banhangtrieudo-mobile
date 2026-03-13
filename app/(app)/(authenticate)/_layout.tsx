@@ -8,6 +8,7 @@ export default function LayoutAuthenticate() {
         <Stack.Screen name="profile" />
         <Stack.Screen name="carts" />
         <Stack.Screen name="payment" />
+        <Stack.Screen name="oders-success" />
       </Stack>
     </>
   );

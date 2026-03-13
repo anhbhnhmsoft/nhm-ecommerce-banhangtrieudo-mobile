@@ -13,6 +13,7 @@ import {
 import { useThemeStore } from "@/modules/app/stores";
 import { usePayment } from "@/modules/payment/hooks/use-payment";
 import { Entypo } from "@expo/vector-icons";
+import { router } from "expo-router";
 import { CreditCard, Landmark, MapPin, Van } from "lucide-react-native";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -316,6 +317,7 @@ export default function PaymentScreen() {
         <TouchableOpacity
           activeOpacity={0.85}
           style={[styles.confirmBtn, { backgroundColor: theme.primary[2] }]}
+          onPress={() => router.push("/oders-success")}
         >
           <Typo
             fontSize={responsiveFont(15)}

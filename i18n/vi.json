@@ -287,5 +287,18 @@
       "invalid_location": "Vui lòng chọn toạ độ hợp lệ",
       "current_location_failed": "Không thể lấy vị trí hiện tại, vui lòng thử lại sau."
     }
+  },
+  "order_success": {
+    "title": "Xác nhận",
+    "heading": "Đặt hàng thành công!",
+    "description": "Cảm ơn bạn đã tin tưởng và mua sắm tại cửa hàng chúng tôi.",
+    "order_code": "Mã đơn hàng",
+    "estimated_date": "Dự kiến giao hàng",
+    "payment_method": "Phương thức",
+    "payment_name": "Tên phương thức",
+    "method_standard": "Giao hàng tiêu chuẩn",
+    "method_bank_or_cod": "Chuyển khoản ",
+    "continue_shopping": "Tiếp tục mua sắm",
+    "view_order": "Xem đơn hàng"
   }
 }
