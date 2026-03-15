@@ -1,0 +1,19 @@
+import { Stack } from "expo-router";
+import React from "react";
+
+export default function LayoutAuthenticate() {
+  return (
+    <>
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="profile" />
+        <Stack.Screen name="carts" />
+        <Stack.Screen name="payment" />
+        <Stack.Screen name="oders-success" />
+        <Stack.Screen name="services" />
+        <Stack.Screen name="booking-services" />
+        <Stack.Screen name="order-history" />
+        <Stack.Screen name="booking-history" />
+      </Stack>
+    </>
+  );
+}

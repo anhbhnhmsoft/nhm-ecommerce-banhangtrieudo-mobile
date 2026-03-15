@@ -9,12 +9,19 @@ import {
 } from "@/lib/utils";
 import { useThemeStore } from "@/modules/app/stores";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import { router } from "expo-router";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-export const HeaderApp = () => {
+import { Ionicons } from "@expo/vector-icons";
+
+interface Props {
+  showProfile?: boolean;
+}
+
+export const HeaderApp = ({ showProfile = true }: Props) => {
   const theme = useThemeStore((s) => s.colors);
   const { t } = useTranslation();
   const insets = useSafeAreaInsets();
@@ -29,13 +36,25 @@ export const HeaderApp = () => {
       paddingTop={insets.top + responsiveSpacingVertical(12)}
     >
       {/* Avatar */}
-      <TouchableOpacity activeOpacity={0.8}>
-        <Image
-          source={{ uri: "https://i.pravatar.cc/150?img=47" }}
-          style={styles.avatar}
-        />
-      </TouchableOpacity>
-
+      {showProfile ? (
+        <TouchableOpacity
+          activeOpacity={0.8}
+          onPress={() => router.push("/(app)/(authenticate)/profile")}
+        >
+          <Image
+            source={{ uri: "https://i.pravatar.cc/150?img=47" }}
+            style={styles.avatar}
+          />
+        </TouchableOpacity>
+      ) : (
+        <TouchableOpacity onPress={() => router.back()}>
+          <Ionicons
+            name="chevron-back-circle-outline"
+            size={responsiveIcon(30)}
+            color={theme.base[1]}
+          />
+        </TouchableOpacity>
+      )}
       {/* Greeting */}
       <Box flex={1} marginLeft={responsiveSpacing(12)}>
         <Typo
@@ -61,6 +80,7 @@ export const HeaderApp = () => {
         activeOpacity={0.7}
         style={styles.iconBtn}
         hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+        onPress={() => router.push("/(app)/(authenticate)/carts")}
       >
         <FontAwesome
           name="shopping-cart"

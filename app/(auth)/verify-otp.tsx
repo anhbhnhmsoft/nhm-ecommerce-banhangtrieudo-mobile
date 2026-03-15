@@ -43,7 +43,7 @@ export default function Otp() {
           showsVerticalScrollIndicator={false}
         >
           {/* Header */}
-          <HeaderBack />
+          <HeaderBack backgroudColor="transparent" />
 
           <Box
             flex={1}

@@ -7,14 +7,13 @@ import {
   responsiveSpacingVertical,
 } from "@/lib/utils";
 import { useThemeStore } from "@/modules/app/stores";
+import { TabKey } from "@/modules/app/utils/type";
+import { Feather, Ionicons } from "@expo/vector-icons";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import React from "react";
 import { Platform, StyleSheet, TouchableOpacity, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-
-export type TabKey = "home" | "manage" | "post" | "zalo" | "account";
 
 interface TabItem {
   key: TabKey;
@@ -37,32 +36,36 @@ export const TABS: TabItem[] = [
     ),
   },
   {
-    key: "manage",
+    key: "products",
     label: "Sản phẩm",
     icon: (color, size) => (
-      <FontAwesome6 name="list-ul" size={size} color={color} />
+      <Feather name="shopping-bag" size={size} color={color} />
     ),
   },
   {
-    key: "post",
-    label: "Đăng tin",
+    key: "services",
+    label: "Dịch vụ",
     icon: (color, size) => (
-      <FontAwesome6 name="plus" size={size} color={color} />
-    ),
-    isCenter: true,
-  },
-  {
-    key: "zalo",
-    label: "Nhóm Zalo",
-    icon: (color, size) => (
-      <MaterialCommunityIcons name="chat-outline" size={size} color={color} />
+      <MaterialCommunityIcons
+        name="briefcase-outline"
+        size={size}
+        color={color}
+      />
     ),
   },
   {
-    key: "account",
-    label: "Tài khoản",
+    key: "contact",
+    label: "Liên hệ",
     icon: (color, size) => (
-      <FontAwesome name="user-circle-o" size={size} color={color} />
+      <Ionicons name="call-outline" size={size} color={color} />
+    ),
+  },
+
+  {
+    key: "news",
+    label: "Tin tức",
+    icon: (color, size) => (
+      <Ionicons name="newspaper-outline" size={size} color={color} />
     ),
   },
 ];
@@ -166,7 +169,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     paddingVertical: responsiveSpacingVertical(4),
-    minHeight: responsiveSpacingVertical(56),
   },
   centerButton: {
     width: responsiveSpacing(54),

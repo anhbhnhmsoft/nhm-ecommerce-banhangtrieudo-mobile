@@ -1,5 +1,5 @@
 import { CategorySevicesItem } from "@/modules/services/components";
-import { FeaturedProduct } from "./type";
+import { Product } from "./type";
 
 export const productCategories: CategorySevicesItem[] = [
   {
@@ -28,13 +28,15 @@ export const productCategories: CategorySevicesItem[] = [
   },
 ];
 
-export const FEATURED_DATA: FeaturedProduct[] = [
+export const FEATURED_DATA: Product[] = [
   {
     id: "1",
     title: "Cafe Arabica ",
     price: "250.000đ",
     location: "TP. Hồ Chí Minh",
     image: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=400",
+    isNew: true,
+    isFeatured: true,
   },
   {
     id: "2",

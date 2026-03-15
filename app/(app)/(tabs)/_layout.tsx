@@ -1,36 +1,26 @@
-import { BottomNavigation, TabKey, TABS } from "@/components/ui";
-import { Tabs, useRouter } from "expo-router";
-
-const TAB_ROUTES: Record<
-  TabKey,
-  | "/(app)/(tabs)/home"
-  | "/(app)/(tabs)/manage"
-  | "/(app)/(tabs)/post"
-  | "/(app)/(tabs)/zalo"
-  | "/(app)/(tabs)/account"
-> = {
-  home: "/(app)/(tabs)/home",
-  manage: "/(app)/(tabs)/manage",
-  post: "/(app)/(tabs)/post",
-  zalo: "/(app)/(tabs)/zalo",
-  account: "/(app)/(tabs)/account",
-};
+import { TABS } from "@/components/ui";
+import { responsiveFont, responsiveIcon } from "@/lib/utils";
+import { useThemeStore } from "@/modules/app/stores";
+import { Tabs } from "expo-router";
 
 export default function TabLayout() {
-  const router = useRouter();
+  const theme = useThemeStore((state) => state.colors);
 
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarShowLabel: false,
+        tabBarActiveTintColor: theme.primary[2],
+        tabBarInactiveTintColor: theme.base[5],
+        tabBarLabelStyle: {
+          fontSize: responsiveFont(11),
+        },
+        tabBarStyle: {
+          backgroundColor: theme.base[1],
+          borderTopColor: "#F0F0F0",
+          borderTopWidth: 1,
+        },
       }}
-      tabBar={(props) => (
-        <BottomNavigation
-          activeTab={props.state.routes[props.state.index].name as TabKey}
-          onTabPress={(tab) => router.push(TAB_ROUTES[tab])}
-        />
-      )}
     >
       {TABS.map((tab) => (
         <Tabs.Screen
@@ -38,6 +28,7 @@ export default function TabLayout() {
           name={tab.key}
           options={{
             title: tab.label,
+            tabBarIcon: ({ color }) => tab.icon(color, responsiveIcon(22)),
           }}
         />
       ))}

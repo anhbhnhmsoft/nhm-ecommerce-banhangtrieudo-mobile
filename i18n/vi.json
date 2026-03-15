@@ -1,7 +1,27 @@
 {
   "common": {
     "greeting": "Xin chào {{name}}!",
-    "greeting_subtitle": "Chào mừng bạn đến với TVH"
+    "greeting_subtitle": "Chào mừng bạn đến với TVH",
+    "details": "Chi tiết",
+    "see_more": "Xem thêm",
+    "collapse": "Rút gọn",
+    "contact": "Liên hệ",
+    "reviews": "đánh giá",
+    "see_all": "Xem tất cả",
+    "months": {
+      "1": "Tháng 1",
+      "2": "Tháng 2",
+      "3": "Tháng 3",
+      "4": "Tháng 4",
+      "5": "Tháng 5",
+      "6": "Tháng 6",
+      "7": "Tháng 7",
+      "8": "Tháng 8",
+      "9": "Tháng 9",
+      "10": "Tháng 10",
+      "11": "Tháng 11",
+      "12": "Tháng 12"
+    }
   },
   "auth": {
     "login": {
@@ -118,12 +138,244 @@
     "banner_subtitle": "Giảm ngay 20% cho hợp đồng đầu tiên",
     "banner_button": "Xem ngay",
     "section_professional": "Dịch vụ chuyên nghiệp",
-    "section_explore": "Khám phá sản phẩm",
+    "section_explore": "Danh mục sản phẩm",
     "section_featured": "Sản phẩm nổi bật",
+    "consumer_products": "Sản phẩm tiêu dùng",
     "section_featured_more": "Xem thêm",
     "section_service": "Dịch vụ tiêu biểu",
     "section_register": "Đăng ký đăng tin",
     "register_desc": "Nếu bạn muốn bán sản phẩm hoặc cung cấp dịch vụ → đăng ký tác tác",
     "register_button": "Đăng ký đăng tin"
+  },
+  "product": {
+    "new": "MỚI",
+    "featured": "Nổi bật",
+    "description_title": "Mô tả sản phẩm",
+    "policy_title": "Chính sách mua hàng",
+    "add_to_cart": "Thêm vào giỏ",
+    "buy_now": "Mua ngay",
+    "seller_info": "Thông tin người bán",
+    "policy": {
+      "genuine": "Sản phẩm chính hãng",
+      "shipping": "Giao hàng toàn quốc",
+      "returns": "Đổi trả trong 7 ngày",
+      "secure_payment": "Thanh toán an toàn",
+      "support": "Hỗ trợ 24/7"
+    }
+  },
+  "services": {
+    "description_title": "Mô tả dịch vụ",
+    "policy_title": "Chính sách dịch vụ",
+    "book_now": "Đặt ngay",
+    "book_service": {
+      "title": "Đặt dịch vụ",
+      "category": "Chăm sóc sắc đẹp",
+      "service_name": "Gói Chăm Sóc Da Hoàng Gia",
+      "service_desc": "Cung cấp bởi Golden Beauty Spa",
+      "pick_datetime": "Chọn ngày & giờ",
+      "contact_info": "Thông tin liên hệ",
+      "note_label": "Ghi chú / Địa chỉ",
+      "note_placeholder": "Yêu cầu đặc biệt cho kỹ thuật viên...",
+      "confirm_button": "Xác nhận đặt lịch"
+    }
+  },
+  "profile": {
+    "info_title": "Thông tin cá nhân",
+    "edit": "Chỉnh sửa",
+    "logout": "Đăng xuất",
+    "version": "Phiên bản",
+    "history": {
+      "title": "Lịch sử",
+      "orders": "Đơn hàng",
+      "bookings": "Đặt lịch"
+    },
+    "order_status": {
+      "pending": "Chờ duyệt",
+      "delivering": "Đang giao",
+      "done": "Hoàn thành",
+      "cancelled": "Đã huỷ"
+    },
+    "settings": {
+      "title": "Cài đặt",
+      "account": "Tài khoản",
+      "change_info": "Chỉnh sửa thông tin",
+      "change_pin": "Đổi mã khóa",
+      "general": "Chung",
+      "notifications": "Thông báo",
+      "language": "Ngôn ngữ",
+      "support": "Khác",
+      "user_guide": "Trung tâm trợ giúp",
+      "terms": "Điều khoản sử dụng",
+      "privacy": "Chính sách bảo mật"
+    },
+    "fields": {
+      "name": "Họ và tên",
+      "email": "Email",
+      "phone": "Số điện thoại"
+    }
+  },
+  "news": {
+    "featured_title": "Tin tức nổi bật",
+    "other_title": "Tin tức khác",
+    "read_more": "Đọc thêm »",
+    "newsletter": {
+      "title": "Đăng ký nhận tin",
+      "subtitle": "Nhận thông tin mới nhất về sản phẩm, khuyến mãi và xu hướng thiết kế",
+      "placeholder": "Nhập email của bạn...",
+      "cta": "Đăng ký ngay",
+      "note": "Chúng tôi cam kết bảo mật thông tin của bạn"
+    }
+  },
+  "contact": {
+    "address": "Địa chỉ",
+    "email": "Email",
+    "website": "Website",
+    "working_hours": "Giờ làm việc",
+    "contact_cooperation": "Liên hệ hợp tác"
+  },
+  "cart": {
+    "title": "Giỏ hàng",
+    "coupon": {
+      "placeholder": "Nhập mã giảm giá",
+      "apply": "Áp dụng"
+    },
+    "summary": {
+      "subtotal": "Tạm tính",
+      "shipping": "Phí vận chuyển",
+      "total": "Tổng thanh toán"
+    },
+    "checkout": "Thanh toán",
+    "empty": {
+      "title": "Giỏ hàng của bạn đang trống",
+      "description": "Hiện tại bạn chưa có sản phẩm nào trong giỏ hàng. Hãy bắt đầu mua sắm để chọn cho mình những món đồ ưng ý nhé.",
+      "continueShopping": "Tiếp tục mua sắm",
+      "viewWishlist": "Xem danh sách yêu thích",
+      "promo": {
+        "badge": "ƯU ĐÃI",
+        "description": "Giảm 10% cho đơn đầu tiên"
+      }
+    }
+  },
+  "payment": {
+    "title": "Thanh toán",
+    "shipping_address": {
+      "label": "Địa chỉ nhận hàng",
+      "change": "Thay đổi"
+    },
+    "payment_method": {
+      "label": "Phương thức thanh toán",
+      "bank_transfer": {
+        "title": "Chuyển khoản ngân hàng",
+        "subtitle": "Xác nhận nhanh chóng"
+      },
+      "cod": {
+        "title": "Thanh toán khi nhận hàng (COD)",
+        "subtitle": "Thanh toán bằng tiền mặt"
+      }
+    },
+    "order_summary": {
+      "label": "Tóm tắt đơn hàng",
+      "subtotal": "Tạm tính ({{count}} sản phẩm)",
+      "shipping_fee": "Phí vận chuyển",
+      "voucher_discount": "Giảm giá voucher",
+      "total": "Tổng cộng"
+    },
+    "confirm_button": "Xác nhận thanh toán",
+    "disclaimer": "Bằng việc nhấn \"Xác nhận thanh toán\" bạn đồng ý với các\nĐiều khoản & Chính sách của chúng tôi."
+  },
+  "location": {
+    "title": "Địa chỉ đã lưu",
+    "description": "Lưu lại địa chỉ yêu thích",
+    "common_address": "Bạn thường đặt dịch vụ tại địa chỉ nào?",
+    "add_new_address": "Thêm địa chỉ mới",
+    "search_placeholder": "Nhập địa chỉ...",
+    "no_result": "Không có kết quả nào",
+    "title_add": "Thêm địa chỉ",
+    "title_edit": "Chỉnh sửa địa chỉ",
+    "label_address": "Địa chỉ / Vị trí",
+    "placeholder_address": "Nhấn để tìm kiếm địa chỉ...",
+    "label_desc": "Ghi chú (Ví dụ: Nhà riêng, Cty)",
+    "placeholder_desc": "Nhập ghi chú (Tuỳ chọn)",
+    "is_primary": "Đặt làm địa chỉ mặc định",
+    "is_primary_desc": "Địa chỉ mặc định sẽ được chọn khi bạn đặt dịch vụ",
+    "save_address": "Lưu địa chỉ",
+    "primary": "Mặc định",
+    "primary_address": "Địa chỉ hiện tại",
+    "no_desc": "Không có ghi chú",
+    "get_current_location": "Lấy vị trí hiện tại",
+    "loading": "Đang xử lý...",
+    "need_location": "Chưa có địa chỉ mặc định.",
+    "getting_location": "Đang lấy vị trí hiện tại...",
+    "error": {
+      "title": "Lỗi địa chỉ",
+      "invalid_address": "Vui lòng chọn địa chỉ hợp lệ từ gợi ý",
+      "invalid_location": "Vui lòng chọn toạ độ hợp lệ",
+      "current_location_failed": "Không thể lấy vị trí hiện tại, vui lòng thử lại sau."
+    }
+  },
+  "order_success": {
+    "title": "Xác nhận",
+    "heading": "Đặt hàng thành công!",
+    "description": "Cảm ơn bạn đã tin tưởng và mua sắm tại cửa hàng chúng tôi.",
+    "order_code": "Mã đơn hàng",
+    "estimated_date": "Dự kiến giao hàng",
+    "payment_method": "Phương thức",
+    "payment_name": "Tên phương thức",
+    "method_standard": "Giao hàng tiêu chuẩn",
+    "method_bank_or_cod": "Chuyển khoản ",
+    "continue_shopping": "Tiếp tục mua sắm",
+    "view_order": "Xem đơn hàng"
+  },
+  "newsletter": {
+    "header_title": "Đăng ký đăng tin",
+    "title": "Gửi yêu cầu đăng tin",
+    "desc_prefix": "Đăng tin hoàn toàn",
+    "desc_highlight": "miễn phí",
+    "desc_suffix": "Yêu cầu của bạn sẽ được quản trị viên phê duyệt trong vòng 24h để đảm bảo chất lượng nội dung.",
+    "full_name": "Họ và tên",
+    "phone": "Số điện thoại",
+    "email": "Email",
+    "service_type": "Loại dịch vụ / Sản phẩm",
+    "service_placeholder": "Chọn loại dịch vụ",
+    "submit_button": "Gửi yêu cầu đăng tin",
+    "submitting": "Đang gửi...",
+    "errors": {
+      "full_name_required": "Vui lòng nhập họ và tên",
+      "phone_invalid": "Số điện thoại không hợp lệ",
+      "phone_numbers_only": "Chỉ nhập số",
+      "email_invalid": "Email không hợp lệ",
+      "service_required": "Vui lòng chọn loại dịch vụ"
+    }
+  },
+  "purchasedProducts": {
+    "title": "Sản phẩm đã mua",
+    "tabs": {
+      "all": "Tất cả",
+      "processing": "Đang xử lý",
+      "delivered": "Đã giao"
+    },
+    "status": {
+      "processing": "ĐANG XỬ LÝ",
+      "delivered": "ĐÃ GIAO"
+    },
+    "purchaseDate": "Ngày mua: {{date}}",
+    "orderDate": "Ngày đặt: {{date}}",
+    "buyAgain": "Mua lại"
+  },
+  "bookingHistory": {
+    "title": "Lịch sử đặt lịch",
+    "tabs": {
+      "all": "Tất cả",
+      "confirmed": "Đã xác nhận",
+      "pending": "Đang chờ",
+      "cancelled": "Đã hủy"
+    },
+    "status": {
+      "confirmed": "ĐÃ XÁC NHẬN",
+      "pending": "ĐANG CHỜ",
+      "cancelled": "ĐÃ HỦY"
+    },
+    "totalPayment": "TỔNG THANH TOÁN",
+    "detail": "Chi tiết"
   }
 }

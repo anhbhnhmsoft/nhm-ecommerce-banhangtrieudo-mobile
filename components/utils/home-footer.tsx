@@ -6,9 +6,13 @@ import {
   responsiveSpacingVertical,
 } from "@/lib/utils";
 import { useThemeStore } from "@/modules/app/stores";
+import { ProductCard } from "@/modules/products/components";
+import { FEATURED_DATA } from "@/modules/products/utils";
+import { router } from "expo-router";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { StyleSheet, TouchableOpacity } from "react-native";
+import { FlatList, StyleSheet, TouchableOpacity } from "react-native";
+import { TextLabel } from "../ui";
 
 export const HomeFooter = () => {
   const { t } = useTranslation();
@@ -20,15 +24,28 @@ export const HomeFooter = () => {
       marginTop={responsiveSpacingVertical(20)}
       marginBottom={responsiveSpacingVertical(24)}
     >
+      <Box marginTop={responsiveSpacingVertical(12)}>
+        <TextLabel
+          title={t("home.consumer_products")}
+          onMore={() => {}}
+          moreLabel={t("home.section_featured_more")}
+        />
+      </Box>
+      <FlatList
+        data={FEATURED_DATA}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        keyExtractor={(i) => i.id}
+        contentContainerStyle={{
+          paddingBottom: responsiveSpacingVertical(4),
+        }}
+        renderItem={({ item }) => <ProductCard item={item} />}
+      />
       <Box
         radius={responsiveSpacing(16)}
         padding={responsiveSpacing(20)}
         alignItems="center"
-        style={{
-          backgroundColor: theme.primary[3],
-          borderWidth: 1,
-          borderColor: "#EDE8D8",
-        }}
+        backgroundColor={theme.primary[3]}
       >
         <Typo
           weight="700"
@@ -51,6 +68,7 @@ export const HomeFooter = () => {
         <TouchableOpacity
           style={[styles.registerBtn, { backgroundColor: theme.primary[2] }]}
           activeOpacity={0.85}
+          onPress={() => router.push("/(app)/(customer)/seller-registration")}
         >
           <Typo
             weight="700"

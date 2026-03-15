@@ -2,8 +2,9 @@ const DefaultColor = {
   white: "#ffffff",
   black: "#000000",
   primary: {
-    1: "#F1F7F7",
-    2: "#D4AF37",
+    1: "#F8F7F6", // light background
+    2: "#D4AF37", // brand color
+    3: "#F4EFE2",
   },
   secondary: {
     1: "#E7000B",

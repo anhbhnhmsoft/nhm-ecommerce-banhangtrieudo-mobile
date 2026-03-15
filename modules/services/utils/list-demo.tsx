@@ -44,6 +44,8 @@ export const SERVICE_DATA: ServiceItem[] = [
     subtitle: "Từ 5.000.000đ",
     tag: "Kinh nghiệm 10 năm",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
+    isNew: true,
+    isFeatured: true,
   },
   {
     id: "2",

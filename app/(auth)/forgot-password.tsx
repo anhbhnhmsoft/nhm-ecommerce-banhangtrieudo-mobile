@@ -50,7 +50,7 @@ export default function ForgotPassword() {
           showsVerticalScrollIndicator={false}
         >
           {/* Header */}
-          <HeaderBack />
+          <HeaderBack backgroudColor="transparent" />
 
           {/* Body */}
           <Box

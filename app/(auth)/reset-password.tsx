@@ -109,7 +109,7 @@ export default function ResetPassword() {
           automaticallyAdjustKeyboardInsets
         >
           {/* Header */}
-          <HeaderBack />
+          <HeaderBack backgroudColor="transparent" />
 
           <Box
             flex={1}
